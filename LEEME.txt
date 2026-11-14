@@ -1,0 +1,18 @@
+POKEDEX TEAM BUILDER - EJECUCION EN WINDOWS
+===========================================
+
+Requisitos: Windows 10/11 con Docker Desktop (motor Linux / WSL 2), PC Intel o AMD, internet.
+
+1. Descargue o clone este repositorio, por ejemplo en C:\pokedex-docker
+   - Descargue pokedex-imagenes.tar.gz desde la seccion Releases del repositorio
+     (https://github.com/jdieTorres/pokedex-docker/releases) y pongalo en esta misma carpeta.
+   - Copie el archivo .env.example y renombre la copia a .env
+2. Abra Docker Desktop y espere a que diga "Engine running".
+3. Doble clic en 1-cargar-imagenes.bat   (solo la primera vez)
+4. Doble clic en 2-iniciar.bat           (abre http://localhost:8090)
+5. Para ver las tablas: http://localhost:8091
+      Sistema: PostgreSQL | Servidor: db | Usuario: pokedex
+      Contrasena: la de POSTGRES_PASSWORD en el archivo .env | Base de datos: pokedex
+6. Para apagar: doble clic en 3-detener.bat (los datos se conservan).
+
+Si el puerto 8090 u 8091 esta ocupado, cambie WEB_PORT o ADMINER_PORT en el archivo .env.
